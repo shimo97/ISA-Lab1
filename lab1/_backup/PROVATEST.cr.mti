@@ -1,0 +1,28 @@
+/home/isa06_2021_2022/lab1/work/data_sink.vhd {0 {vcom -work work -2002 -explicit -vopt /home/isa06_2021_2022/lab1/work/data_sink.vhd
+Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+** Error: (vcom-25) Invalid ModelSim library "./work". No _info file found.
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /home/isa06_2021_2022/lab1/work/tb_fir.v {0 {vlog -work work -vopt /home/isa06_2021_2022/lab1/work/tb_fir.v
+Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+** Error: (vlog-25) Invalid ModelSim library "./work". No _info file found.
+No such file or directory. (errno = ENOENT)
+** Fatal: (vlog-7004) No work directory defined. (work=work)
+
+
+} {3.0 4.0} {}} /home/isa06_2021_2022/lab1/work/data_maker_new.vhd {0 {vcom -work work -2002 -explicit -vopt /home/isa06_2021_2022/lab1/work/data_maker_new.vhd
+Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+** Error: (vcom-25) Invalid ModelSim library "./work". No _info file found.
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /home/isa06_2021_2022/lab1/work/fake_dut.vhd {0 {vcom -work work -2002 -explicit -vopt /home/isa06_2021_2022/lab1/work/fake_dut.vhd
+Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+** Error: (vcom-25) Invalid ModelSim library "./work". No _info file found.
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /home/isa06_2021_2022/lab1/work/clk_gen.vhd {0 {vcom -work work -2002 -explicit -vopt /home/isa06_2021_2022/lab1/work/clk_gen.vhd
+Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+** Error: (vcom-25) Invalid ModelSim library "./work". No _info file found.
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}}
