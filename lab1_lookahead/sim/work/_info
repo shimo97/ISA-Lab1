@@ -1,11 +1,11 @@
 m255
 13
 cModel Technology
-d/home/isa06_2021_2022/lab1_lookahead/sim
+d/home/isa06_2021_2022/lab1/lab1_lookahead/sim
 T_opt
-V^<<XSPf]2I[47==^H`8VD3
+VbGB8Wn@9l<JH4NX=[^@R:3
 06 9 4 ./work tb_fir_LA fast 0
-o-quiet -auto_acc_if_foreign -work work
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_fir_LA/UUT=../innovus/IIR_lookahead.sdf -suppress 1948
 tExplicit 1
 OE;O;6.2g;35
 Eclk_gen
@@ -116,81 +116,19 @@ M2 ieee std_logic_misc
 M1 synopsys attributes
 o-93 -work ./work
 tExplicit 1
-Eflipflop
-w1634034767
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8../src/flipflop.vhd
-F../src/flipflop.vhd
-l0
-L4
-V[8[MB@j<kFUheE;?1D3Ye0
-OE;C;6.2g;35
+vIIR_lookahead
+IC?jc>ML2>Z`SG9B2MdZML3
+V0HCYYk^mV2556TO]I^P`f0
+w1637003070
+8../innovus/IIR_lookahead.v
+F../innovus/IIR_lookahead.v
+L0 15
+V0HCYYk^mV2556TO]I^P`f0
+OE;L;6.2g;35
+r1
 31
-o-93 -work ./work
-tExplicit 1
-Abehavior
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work flipflop [8[MB@j<kFUheE;?1D3Ye0
-l12
-L10
-V3`mPfJEPOIMa]fg9nQRJo2
-OE;C;6.2g;35
-31
-M1 ieee std_logic_1164
-o-93 -work ./work
-tExplicit 1
-Eiir_lookahead
-w1636636853
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8../src/IIR_lookahead.vhd
-F../src/IIR_lookahead.vhd
-l0
-L5
-VA_oj6UBCh7F3=zVzGW4V10
-OE;C;6.2g;35
-31
-o-93 -work ./work
-tExplicit 1
-Abehavior
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work iir_lookahead A_oj6UBCh7F3=zVzGW4V10
-l48
-L16
-VPJ5G369B[gaMc@EmezFdl3
-OE;C;6.2g;35
-31
-M2 ieee std_logic_1164
-M1 ieee numeric_std
-o-93 -work ./work
-tExplicit 1
-Eregn
-w1634034767
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8../src/regn.vhd
-F../src/regn.vhd
-l0
-L5
-VO3_mXNd8XKa`:=DjAdE<_3
-OE;C;6.2g;35
-31
-o-93 -work ./work
-tExplicit 1
-Abehavior
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work regn O3_mXNd8XKa`:=DjAdE<_3
-l14
-L12
-VR>0IINYZi=61T6D_iOY_m1
-OE;C;6.2g;35
-31
-M2 ieee std_logic_1164
-M1 ieee numeric_std
-o-93 -work ./work
-tExplicit 1
+o-work ./work
+n@i@i@r_lookahead
 vtb_fir_LA
 IlmHGiAFJoz2^h8I[iTISK0
 V?9BRzMzY<RTODV38Wi;0n2

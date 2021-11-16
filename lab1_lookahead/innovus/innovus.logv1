@@ -1,0 +1,56 @@
+[11/15 16:15:05      0s] 
+[11/15 16:15:05      0s] Cadence Innovus(TM) Implementation System.
+[11/15 16:15:05      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[11/15 16:15:05      0s] 
+[11/15 16:15:05      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+[11/15 16:15:05      0s] Options:	
+[11/15 16:15:05      0s] Date:		Mon Nov 15 16:15:05 2021
+[11/15 16:15:05      0s] Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
+[11/15 16:15:05      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
+[11/15 16:15:05      0s] 
+[11/15 16:15:05      0s] License:
+[11/15 16:15:05      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[11/15 16:15:05      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[11/15 16:16:23     22s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+[11/15 16:16:23     22s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+[11/15 16:16:23     22s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+[11/15 16:16:23     22s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+[11/15 16:16:23     22s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+[11/15 16:16:23     22s] @(#)CDS: CPE v17.11-s095
+[11/15 16:16:23     22s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+[11/15 16:16:23     22s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[11/15 16:16:23     22s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[11/15 16:16:23     22s] @(#)CDS: RCDB 11.10
+[11/15 16:16:23     22s] --- Running on localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB) ---
+[11/15 16:16:23     22s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_6211_localhost.localdomain_isa06_2021_2022_RBZQhp.
+
+[11/15 16:16:23     22s] Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+[11/15 16:16:27     23s] 
+[11/15 16:16:27     23s] **INFO:  MMMC transition support version v31-84 
+[11/15 16:16:27     23s] 
+[11/15 16:16:27     23s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[11/15 16:16:27     23s] <CMD> suppressMessage ENCEXT-2799
+[11/15 16:16:28     23s] <CMD> getDrawView
+[11/15 16:16:28     23s] <CMD> loadWorkspace -name Physical
+[11/15 16:16:29     23s] <CMD> win
+[11/15 19:12:38    380s] <CMD> set init_design_netlisttype verilog
+[11/15 19:12:38    380s] <CMD> set init_design_settop 1
+[11/15 19:12:38    380s] <CMD> set init_top_cell IIR_filter
+[11/15 19:12:38    380s] <CMD> set init_verilog ../netlist/IIR_filter.v
+[11/15 19:12:38    380s] <CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+[11/15 19:12:38    380s] <CMD> set init_gnd_net VSS
+[11/15 19:12:38    380s] <CMD> set init_pwr_net VDD
+[11/15 19:13:10    382s] <CMD> set init_mmmc_file mmm_design.tcl
+[11/15 19:13:19    382s] <CMD> init_design
+[11/15 19:13:20    382s] #% Begin Load MMMC data ... (date=11/15 19:13:20, mem=312.1M)
+[11/15 19:13:20    382s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/IIR_filter.sdc' for mode 'SDC_layout'
+
+[11/15 19:13:43    383s] 
+[11/15 19:13:43    383s] *** Memory Usage v#1 (Current mem = 489.449M, initial mem = 187.684M) ***
+[11/15 19:13:43    383s] 
+[11/15 19:13:43    383s] *** Summary of all messages that are not suppressed in this session:
+[11/15 19:13:43    383s] Severity  ID               Count  Summary                                  
+[11/15 19:13:43    383s] ERROR     TCLCMD-989           1  cannot open SDC file '%s' for mode '%s'  
+[11/15 19:13:43    383s] *** Message Summary: 0 warning(s), 1 error(s)
+[11/15 19:13:43    383s] 
+[11/15 19:13:43    383s] --- Ending "Innovus" (totcpu=0:06:24, real=2:58:38, mem=489.4M) ---
