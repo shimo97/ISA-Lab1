@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sun Nov  7 18:48:16 2021                
+#  Created on Wed Nov 17 01:07:44 2021                
 #                                                     
 #######################################################
 
@@ -18,3 +18,31 @@ suppressMessage ENCEXT-2799
 getDrawView
 loadWorkspace -name Physical
 win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign /home/isa06_2021_2022/lab1/lab1/innovus/IIR_filter.enc.dat IIR_filter
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+setLayerPreference layoutObj -isVisible 1
+setLayerPreference layoutObj -isVisible 0
+set init_design_netlisttype verilog
+set init_design_settop 1
+set init_top_cell IIR_filter
+set init_verilog ../netlist/IIR_filter.v
+set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+set init_gnd_net VSS
+set init_pwr_net VDD
+set init_mmmc_file mmm_design.tcl
+init_design
+pan 6.029 3.634
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign /home/isa06_2021_2022/lab1/lab1/innovus/IIR_filter.enc.dat IIR_filter
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1

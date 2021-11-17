@@ -140,3 +140,4 @@ do msim_script_innovus.do
 # Loading timing data from ../innovus/IIR_lookahead.sdf
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
 #    Time: 0 ns  Iteration: 0  Region: /tb_fir_LA  File: ../tb/tb_fir_LA.v
+exit

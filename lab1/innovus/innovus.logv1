@@ -1,40 +1,127 @@
-[11/07 18:45:36      0s] 
-[11/07 18:45:36      0s] Cadence Innovus(TM) Implementation System.
-[11/07 18:45:36      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
-[11/07 18:45:36      0s] 
-[11/07 18:45:36      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
-[11/07 18:45:36      0s] Options:	
-[11/07 18:45:36      0s] Date:		Sun Nov  7 18:45:36 2021
-[11/07 18:45:36      0s] Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
-[11/07 18:45:36      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
-[11/07 18:45:36      0s] 
-[11/07 18:45:36      0s] License:
-[11/07 18:45:36      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
-[11/07 18:45:36      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
-[11/07 18:48:08     22s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
-[11/07 18:48:08     22s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
-[11/07 18:48:08     22s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
-[11/07 18:48:08     22s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
-[11/07 18:48:08     22s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
-[11/07 18:48:08     22s] @(#)CDS: CPE v17.11-s095
-[11/07 18:48:08     22s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
-[11/07 18:48:08     22s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
-[11/07 18:48:08     22s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
-[11/07 18:48:08     22s] @(#)CDS: RCDB 11.10
-[11/07 18:48:08     22s] --- Running on localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB) ---
-[11/07 18:48:09     22s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_1719_localhost.localdomain_isa06_2021_2022_FsEOdg.
+[11/17 01:06:14      0s] 
+[11/17 01:06:14      0s] Cadence Innovus(TM) Implementation System.
+[11/17 01:06:14      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[11/17 01:06:14      0s] 
+[11/17 01:06:14      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+[11/17 01:06:14      0s] Options:	
+[11/17 01:06:14      0s] Date:		Wed Nov 17 01:06:14 2021
+[11/17 01:06:14      0s] Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
+[11/17 01:06:14      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
+[11/17 01:06:14      0s] 
+[11/17 01:06:14      0s] License:
+[11/17 01:06:15      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[11/17 01:06:15      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[11/17 01:07:38     21s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+[11/17 01:07:38     21s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+[11/17 01:07:38     21s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+[11/17 01:07:38     21s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+[11/17 01:07:38     21s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+[11/17 01:07:38     21s] @(#)CDS: CPE v17.11-s095
+[11/17 01:07:38     21s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+[11/17 01:07:38     21s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[11/17 01:07:38     21s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[11/17 01:07:38     21s] @(#)CDS: RCDB 11.10
+[11/17 01:07:38     21s] --- Running on localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB) ---
+[11/17 01:07:39     21s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_10714_localhost.localdomain_isa06_2021_2022_JNsntW.
 
-[11/07 18:48:09     22s] Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
-[11/07 18:48:16     23s] 
-[11/07 18:48:16     23s] **INFO:  MMMC transition support version v31-84 
-[11/07 18:48:16     23s] 
-[11/07 18:48:16     23s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
-[11/07 18:48:16     23s] <CMD> suppressMessage ENCEXT-2799
-[11/07 18:48:19     24s] <CMD> getDrawView
-[11/07 18:48:19     24s] <CMD> loadWorkspace -name Physical
-[11/07 18:48:20     24s] <CMD> win
-[11/07 18:49:35     27s] 
-[11/07 18:49:35     27s] *** Memory Usage v#1 (Current mem = 486.973M, initial mem = 179.684M) ***
-[11/07 18:49:35     27s] *** Message Summary: 0 warning(s), 0 error(s)
-[11/07 18:49:35     27s] 
-[11/07 18:49:35     27s] --- Ending "Innovus" (totcpu=0:00:27.4, real=0:03:59, mem=487.0M) ---
+[11/17 01:07:39     21s] Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+[11/17 01:07:45     22s] 
+[11/17 01:07:45     22s] **INFO:  MMMC transition support version v31-84 
+[11/17 01:07:45     22s] 
+[11/17 01:07:45     22s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[11/17 01:07:45     22s] <CMD> suppressMessage ENCEXT-2799
+[11/17 01:07:46     23s] <CMD> getDrawView
+[11/17 01:07:46     23s] <CMD> loadWorkspace -name Physical
+[11/17 01:07:47     23s] <CMD> win
+[11/17 01:09:48     28s] <CMD> encMessage warning 0
+[11/17 01:09:48     28s] Suppress "**WARN ..." messages.
+[11/17 01:09:48     28s] <CMD> encMessage debug 0
+[11/17 01:09:48     28s] <CMD> encMessage info 0
+[11/17 01:09:49     28s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[11/17 01:09:50     28s] Loading view definition file from /home/isa06_2021_2022/lab1/lab1/innovus/IIR_filter.enc.dat/viewDefinition.tcl
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:50     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:51     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:51     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:51     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:51     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:51     28s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:51     29s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:51     29s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/17 01:09:59     31s] *** End library_loading (cpu=0.04min, real=0.15min, mem=21.9M, fe_cpu=0.52min, fe_real=3.75min, fe_mem=528.0M) ***
+[11/17 01:10:00     31s] *** Netlist is unique.
+[11/17 01:10:01     31s] Loading preference file /home/isa06_2021_2022/lab1/lab1/innovus/IIR_filter.enc.dat/gui.pref.tcl ...
+[11/17 01:10:01     31s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[11/17 01:10:01     31s] **WARN: (IMPTCM-77):	Option "-modulePlan" for command setPlaceMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[11/17 01:10:09     33s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[11/17 01:10:47     35s] <CMD> setLayerPreference layoutObj -isVisible 1
+[11/17 01:10:48     35s] <CMD> setLayerPreference layoutObj -isVisible 0
+[11/17 01:13:46     41s] <CMD> set init_design_netlisttype verilog
+[11/17 01:13:46     41s] <CMD> set init_design_settop 1
+[11/17 01:13:46     41s] <CMD> set init_top_cell IIR_filter
+[11/17 01:13:46     41s] <CMD> set init_verilog ../netlist/IIR_filter.v
+[11/17 01:13:46     41s] <CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+[11/17 01:13:46     41s] <CMD> set init_gnd_net VSS
+[11/17 01:13:46     41s] <CMD> set init_pwr_net VDD
+[11/17 01:14:15     43s] <CMD> set init_mmmc_file mmm_design.tcl
+[11/17 01:14:15     43s] <CMD> init_design
+[11/17 01:14:15     43s] **WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+[11/17 01:14:15     43s] 
+[11/17 01:14:15     43s] *** Summary of all messages that are not suppressed in this session:
+[11/17 01:14:15     43s] Severity  ID               Count  Summary                                  
+[11/17 01:14:15     43s] WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+[11/17 01:14:15     43s] *** Message Summary: 1 warning(s), 0 error(s)
+[11/17 01:14:15     43s] 
+[11/17 01:14:36     44s] <CMD> pan 6.029 3.634
+[11/17 01:14:53     44s] <CMD> encMessage warning 0
+[11/17 01:14:53     44s] Suppress "**WARN ..." messages.
+[11/17 01:14:53     44s] <CMD> encMessage debug 0
+[11/17 01:14:53     44s] <CMD> encMessage info 0
+[11/17 01:14:54     44s] Free PSO.
+[11/17 01:14:56     45s] **WARN: (IMPCK-8086):	The command setCTSMode is obsolete and will be removed in the next release. This command still works in this release, but by the next release you must transition to the CCOpt-based CTS flow.
+[11/17 01:14:59     45s] 
+[11/17 01:14:59     45s] 
+[11/17 01:14:59     45s] Info (SM2C): Status of key globals:
+[11/17 01:14:59     45s] 	 MMMC-by-default flow     : 1
+[11/17 01:14:59     45s] 	 Default MMMC objs envvar : 0
+[11/17 01:14:59     45s] 	 Data portability         : 0
+[11/17 01:14:59     45s] 	 MMMC PV Emulation        : 0
+[11/17 01:14:59     45s] 	 MMMC debug               : 0
+[11/17 01:14:59     45s] 	 Init_Design flow         : 1
+[11/17 01:14:59     45s] 
+[11/17 01:14:59     45s] 
+[11/17 01:14:59     45s] 	 CTE SM2C global          : false
+[11/17 01:14:59     45s] 	 Reporting view filter    : false
+[11/17 01:15:00     46s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[11/17 01:15:01     46s] Loading view definition file from /home/isa06_2021_2022/lab1/lab1/innovus/IIR_filter.enc.dat/viewDefinition.tcl
+[11/17 01:15:16     48s] *** End library_loading (cpu=0.04min, real=0.25min, mem=8.0M, fe_cpu=0.81min, fe_real=9.03min, fe_mem=571.3M) ***
+[11/17 01:15:19     49s] *** Netlist is unique.
+[11/17 01:15:20     49s] Loading preference file /home/isa06_2021_2022/lab1/lab1/innovus/IIR_filter.enc.dat/gui.pref.tcl ...
+[11/17 01:15:21     49s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[11/17 01:15:21     49s] **WARN: (IMPTCM-77):	Option "-modulePlan" for command setPlaceMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[11/17 01:15:23     49s] **WARN: analysis view MyAnView not found, use default_view_setup
+[11/17 01:15:29     50s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[11/17 01:15:42     51s] 
+[11/17 01:15:42     51s] *** Memory Usage v#1 (Current mem = 733.156M, initial mem = 179.684M) ***
+[11/17 01:15:42     51s] 
+[11/17 01:15:42     51s] *** Summary of all messages that are not suppressed in this session:
+[11/17 01:15:42     51s] Severity  ID               Count  Summary                                  
+[11/17 01:15:42     51s] WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+[11/17 01:15:42     51s] WARNING   IMPCK-8086           1  The command %s is obsolete and will be r...
+[11/17 01:15:42     51s] WARNING   IMPTCM-77            4  Option "%s" for command %s is obsolete a...
+[11/17 01:15:42     51s] WARNING   GLOBAL-100           4  Global '%s' has become obsolete. It will...
+[11/17 01:15:42     51s] WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+[11/17 01:15:42     51s] *** Message Summary: 30 warning(s), 0 error(s)
+[11/17 01:15:42     51s] 
+[11/17 01:15:42     51s] --- Ending "Innovus" (totcpu=0:00:51.9, real=0:09:28, mem=733.2M) ---

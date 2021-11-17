@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Tue Nov  9 11:05:44 2021                
+#  Created on Wed Nov 17 18:09:21 2021                
 #                                                     
 #######################################################
 
@@ -18,14 +18,10 @@ suppressMessage ENCEXT-2799
 getDrawView
 loadWorkspace -name Physical
 win
-encMessage warning 0
-encMessage debug 0
-encMessage info 0
-restoreDesign /home/isa06_2021_2022/lab1/innovus/IIR_filter.enc.dat IIR_filter
-setDrawView fplan
-encMessage warning 1
-encMessage debug 0
-encMessage info 1
+man getDrawView
+restoreDesign /home/isa06_2021_2022/lab1/lab1/innovus/IIR_filter.enc.dat IIR_filter
+getDrawView
+setDrawView place
 reset_parasitics
 extractRC
 rcOut -setload IIR_filter.setload -rc_corner my_rc
@@ -44,4 +40,4 @@ set_power -reset
 set_powerup_analysis -reset
 set_dynamic_power_simulation -reset
 report_power -rail_analysis_format VS -outfile .//IIR_filter.rpt
-report_power -outfile innovus_report_power -sort { total }
+report_power -outfile ./powerReport.txt -sort { total }

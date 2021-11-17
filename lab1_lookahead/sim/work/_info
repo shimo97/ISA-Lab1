@@ -3,7 +3,7 @@ m255
 cModel Technology
 d/home/isa06_2021_2022/lab1/lab1_lookahead/sim
 T_opt
-VbGB8Wn@9l<JH4NX=[^@R:3
+V28eahIOEoKdTz>SK2loe?2
 06 9 4 ./work tb_fir_LA fast 0
 o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_fir_LA/UUT=../innovus/IIR_lookahead.sdf -suppress 1948
 tExplicit 1
@@ -117,9 +117,9 @@ M1 synopsys attributes
 o-93 -work ./work
 tExplicit 1
 vIIR_lookahead
-IC?jc>ML2>Z`SG9B2MdZML3
+IgJjJmFP_h?XFK^[_P6ZI^3
 V0HCYYk^mV2556TO]I^P`f0
-w1637003070
+w1637171856
 8../innovus/IIR_lookahead.v
 F../innovus/IIR_lookahead.v
 L0 15

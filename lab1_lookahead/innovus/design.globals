@@ -4,6 +4,7 @@ set IN_DIR "../netlist"
 set TopLevelDesign "IIR_lookahead"
 set in_verilog_filename "${IN_DIR}/${TopLevelDesign}.v"
 set in_sdc_filename "${IN_DIR}/${TopLevelDesign}.sdc"
+set UUT_name "/tb_fir_LA/UUT"
 
 ## DO NOT TOUCH
 

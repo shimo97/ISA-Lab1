@@ -1,9 +1,9 @@
 m255
 13
 cModel Technology
-d/home/isa06_2021_2022/lab1/sim
+d/home/isa06_2021_2022/lab1/lab1/sim
 T_opt
-V1U`7R:FS:``2a=jlI@KXC0
+V[1`1K;F62XGXkNWSYUIR_1
 06 6 4 ./work tb_fir fast 0
 o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_fir/UUT=../innovus/IIR_filter.sdf -suppress 1948
 tExplicit 1
@@ -119,7 +119,7 @@ tExplicit 1
 vIIR_filter
 IDkIoZ_Cnf:Hz2^WYN02E61
 VR?dC]lYT2mi0iIhU?LH8[3
-w1636412456
+w1637094395
 8../innovus/IIR_filter.v
 F../innovus/IIR_filter.v
 L0 15
