@@ -5,9 +5,9 @@ Warning: There is no defined clock in the design. (PWR-80)
 ****************************************
 Report : power
         -analysis_effort low
-Design : IIR_lookahead
+Design : IIR_filter
 Version: O-2018.06-SP4
-Date   : Mon Nov 15 15:56:29 2021
+Date   : Thu Nov 18 16:21:07 2021
 ****************************************
 
 
@@ -21,7 +21,7 @@ Wire Load Model Mode: top
 
 Design        Wire Load Model            Library
 ------------------------------------------------
-IIR_lookahead          5K_hvratio_1_1    NangateOpenCellLibrary
+IIR_filter             5K_hvratio_1_1    NangateOpenCellLibrary
 
 
 Global Operating Voltage = 1.1  
@@ -50,7 +50,7 @@ black_box          0.0000            0.0000            0.0000            0.0000 
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
 register          61.4431           14.5485        6.2095e+03           82.2011  (  39.04%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational     59.2041           46.2478        2.2887e+04          128.3391  (  60.96%)
+combinational     59.2042           46.2478        2.2887e+04          128.3391  (  60.96%)
 --------------------------------------------------------------------------------------------------
 Total            120.6472 uW        60.7964 uW     2.9097e+04 nW       210.5401 uW
 1

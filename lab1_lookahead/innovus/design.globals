@@ -1,10 +1,10 @@
 ## CUSTOMIZE
 
 set IN_DIR "../netlist"
-set TopLevelDesign "IIR_lookahead"
+set TopLevelDesign "IIR_filter"
 set in_verilog_filename "${IN_DIR}/${TopLevelDesign}.v"
 set in_sdc_filename "${IN_DIR}/${TopLevelDesign}.sdc"
-set UUT_name "/tb_fir_LA/UUT"
+set UUT_name "/tb_fir/UUT"
 
 ## DO NOT TOUCH
 

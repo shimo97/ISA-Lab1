@@ -8,7 +8,7 @@ use ieee.std_logic_misc.all;
 library std;
 use std.textio.all;
 
-entity data_sink_LA is
+entity data_sink is
   generic(Nb : integer := 12; --number of data bits
   	  clkdelay : integer := 4);  --latency of filter (from input data sampling to output data sampling, must be >= 2)
   port (
@@ -18,9 +18,9 @@ entity data_sink_LA is
     DUT_VIN : in std_logic;
     DIN   : in std_logic_vector(Nb-1 downto 0);
     ERR: buffer std_logic_vector(3 downto 0));
-end data_sink_LA;
+end data_sink;
 
-architecture beh of data_sink_LA is
+architecture beh of data_sink is
   signal VIN_shift : std_logic_vector(0 to clkdelay-1);  --shift register to propagate VIN
   constant tco : time := 1 ns; --T clk to output
 begin  -- beh

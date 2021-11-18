@@ -1,6 +1,6 @@
 //`timescale 1ns
 
-module tb_fir_LA ();
+module tb_fir ();
 
    wire CLK_i;
    wire RST_n_i;
@@ -20,7 +20,7 @@ module tb_fir_LA ();
   	      .CLK(CLK_i),
 	      .RST_n(RST_n_i));
 
-   data_maker_LA SM(.CLK(CLK_i),
+   data_maker SM(.CLK(CLK_i),
 	         .RST_n(RST_n_i),
 		 .VOUT(VIN_i),
 		 .DOUT(DIN_i),
@@ -30,7 +30,7 @@ module tb_fir_LA ();
 		 .a1(a1_i),
 		 .END_SIM(END_SIM_i));
 
-   IIR_lookahead UUT(.CLK(CLK_i),
+   IIR_filter UUT(.CLK(CLK_i),
 	     .RST_n(RST_n_i),
 	     .DIN(DIN_i),
              .VIN(VIN_i),
@@ -41,7 +41,7 @@ module tb_fir_LA ();
              .DOUT(DOUT_i),
              .VOUT(VOUT_i));
 
-   data_sink_LA DS(.CLK(CLK_i),
+   data_sink DS(.CLK(CLK_i),
 		.RST_n(RST_n_i),
 		.VIN(VOUT_i),
                 .DUT_VIN(DUT_VIN_i),
