@@ -1,0 +1,54 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : IIR_filter
+Version: O-2018.06-SP4
+Date   : Sun Nov 21 21:59:02 2021
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+IIR_filter             5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 187.5097 uW   (55%)
+  Net Switching Power  = 155.3916 uW   (45%)
+                         ---------
+Total Dynamic Power    = 342.9012 uW  (100%)
+
+Cell Leakage Power     =  24.6343 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register          22.3970            4.6639        2.2945e+03           29.3554  (   7.99%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    165.1126          150.7276        2.2340e+04          338.1802  (  92.01%)
+--------------------------------------------------------------------------------------------------
+Total            187.5097 uW       155.3915 uW     2.4634e+04 nW       367.5356 uW
+1

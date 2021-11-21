@@ -1,0 +1,61 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IIR_filter
+Version: O-2018.06-SP4
+Date   : Sun Nov 21 21:05:53 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: a1[8] (input port clocked by MY_CLK)
+  Endpoint: rega1_Q_reg_6_
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  IIR_filter         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MY_CLK (rise edge)                 0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.50       0.50 f
+  a1[8] (in)                               0.00       0.50 f
+  mult_68_U212/ZN (XNOR2_X1)               0.16       0.66 r
+  mult_68_U325/ZN (NAND2_X1)               0.09       0.75 f
+  mult_68_U273/ZN (OAI22_X1)               0.07       0.83 r
+  mult_68_U279/ZN (XNOR2_X1)               0.07       0.90 r
+  mult_68_U84/S (FA_X1)                    0.12       1.02 f
+  mult_68_U83/S (FA_X1)                    0.14       1.15 f
+  mult_68_U367/ZN (NAND2_X1)               0.04       1.19 r
+  mult_68_U232/ZN (OAI21_X1)               0.04       1.23 f
+  mult_68_U336/ZN (AOI21_X1)               0.07       1.30 r
+  mult_68_U383/ZN (OAI21_X1)               0.04       1.34 f
+  mult_68_U373/ZN (XNOR2_X1)               0.05       1.39 f
+  rega1_U6/Z (MUX2_X1)                     0.06       1.46 f
+  rega1_Q_reg_6_/D (DFFR_X1)               0.01       1.47 f
+  data arrival time                                   1.47
+
+  clock MY_CLK (rise edge)                 1.58       1.58
+  clock network delay (ideal)              0.00       1.58
+  clock uncertainty                       -0.07       1.51
+  rega1_Q_reg_6_/CK (DFFR_X1)              0.00       1.51 r
+  library setup time                      -0.04       1.47
+  data required time                                  1.47
+  -----------------------------------------------------------
+  data required time                                  1.47
+  data arrival time                                  -1.47
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
