@@ -28,6 +28,13 @@ module tb_fir ();
 		 .a1(a1_i),
 		 .END_SIM(END_SIM_i));
 
+   data_sink DS(.CLK(CLK_i),
+		.RST_n(RST_n_i),
+		.VIN(VOUT_i),
+                .DUT_VIN(DUT_VIN_i),
+		.DIN(DOUT_i),
+                .ERR(ERR_i));
+
    IIR_filter UUT(.CLK(CLK_i),
 	     .RST_n(RST_n_i),
 	     .DIN(DIN_i),
@@ -36,14 +43,7 @@ module tb_fir ();
 	     .b1(b1_i),
 	     .a1(a1_i),
              .DOUT(DOUT_i),
-             .VOUT(VOUT_i));
-
-   data_sink DS(.CLK(CLK_i),
-		.RST_n(RST_n_i),
-		.VIN(VOUT_i),
-                .DUT_VIN(DUT_VIN_i),
-		.DIN(DOUT_i),
-                .ERR(ERR_i));   
+             .VOUT(VOUT_i)); 
 
    assign DUT_VIN_i = VIN_i;
 

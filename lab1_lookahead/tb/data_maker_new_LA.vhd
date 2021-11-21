@@ -32,10 +32,10 @@ architecture beh of data_maker is
 
 begin  -- beh
   --INSERT FILTER COEFFICIENTS
-  b0 <= conv_std_logic_vector(861,Nb);
-  b1 <= conv_std_logic_vector(998,Nb);
-  b2 <= conv_std_logic_vector(136,Nb);
-  a1 <= conv_std_logic_vector(51,Nb);  
+  b0 <= conv_std_logic_vector(861,Nb) after tco;
+  b1 <= conv_std_logic_vector(998,Nb) after tco;
+  b2 <= conv_std_logic_vector(136,Nb) after tco;
+  a1 <= conv_std_logic_vector(51,Nb) after tco;  
 
   process (CLK, RST_n)
     file fp_in : text open READ_MODE is "../input.txt"; --INPUT FILE
@@ -46,16 +46,16 @@ begin  -- beh
     variable rnd : integer; --random extraction variable (integer 0 to 100)
     variable seed1 : integer := 54; --random seeds
     variable seed2 : integer := 120;
-    --variable prob :integer := 5; --probability (%) of VIN going down instead of sending new data
+    variable prob :integer := 5; --probability (%) of VIN going down instead of sending new data
   begin  -- process
     if RST_n = '0' then                 -- asynchronous reset (active low)
       DOUT <= (others => '0') after tco;      
       VOUT <= '0' after tco;
       sEndSim <= '0' after tco;
     elsif CLK'event and CLK = '1' then  -- rising clock edge
-      --uniform(seed1, seed2, r);  --extracting random number
-      --rnd:= integer(round(r * real(101) - 0.5)); --transforming into integer
-      --if(rnd>prob) then --if vin has to remain high, new data is sent
+      uniform(seed1, seed2, r);  --extracting random number
+      rnd:= integer(round(r * real(101) - 0.5)); --transforming into integer
+      if(rnd>prob) then --if vin has to remain high, new data is sent
         if not endfile(fp_in) then
           readline(fp_in, line_in);
           read(line_in, x);
@@ -66,9 +66,9 @@ begin  -- beh
           VOUT <= '0' after tco;        
           sEndSim <= '1' after tco; --starting simulation end (actually ended after latency)
         end if;
-      --else --otherwise VIN goes low and no new data is sent
-          --VOUT<='0' after tco;
-      --end if;
+      else --otherwise VIN goes low and no new data is sent
+          VOUT<='0' after tco;
+      end if;
     end if;
   end process;
 

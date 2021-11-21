@@ -1,3 +1,4 @@
 #!/bin/bash
 source /software/scripts/init_synopsys_64.18
-design_vision
+#design_vision
+dc_shell-xg-t

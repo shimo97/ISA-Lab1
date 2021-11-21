@@ -110,7 +110,7 @@ setVerifyGeometryMode -area { 0 0 0 0 } -minWidth true -minSpacing true -minArea
 verifyGeometry
 setVerifyGeometryMode -area { 0 0 0 0 }
 reportGateCount -level 5 -limit 100 -outfile "${TopLevelDesign}.gateCount"
-saveNetlist "${TopLevelDesign}.v"
+saveNetlist "${IN_DIR}/${TopLevelDesign}_innovus.v"
 all_hold_analysis_views 
 all_setup_analysis_views 
-write_sdf  -ideal_clock_network "${TopLevelDesign}.sdf"
+write_sdf -typ_view "MyAnView" -ideal_clock_network "${IN_DIR}/${TopLevelDesign}_innovus.sdf"

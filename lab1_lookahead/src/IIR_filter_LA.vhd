@@ -67,7 +67,7 @@ BEGIN
 	-- to obtain the result in the format Q1.X since it is known that the result is lower than 1 in magnitude.
 	mula1 <= a1_t * u_del;
 	t_mula1 <= mula1(12 downto 6);
-	rega1 : regn generic map (7) port map (std_logic_vector(t_mula1), CLK, RST_n, q2, t_mula1_del_vec);
+	rega1 : regn generic map (7) port map (std_logic_vector(t_mula1), CLK, RST_n, q1, t_mula1_del_vec);
 	t_mula1_del <= signed(t_mula1_del_vec);
 	
 	mulb0 <= b0_t * u_del;

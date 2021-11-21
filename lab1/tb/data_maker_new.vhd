@@ -31,9 +31,9 @@ architecture beh of data_maker is
 
 begin  -- beh
   --INSERT FILTER COEFFICIENTS
-  b0 <= conv_std_logic_vector(861,Nb);
-  b1 <= conv_std_logic_vector(861,Nb);
-  a1 <= conv_std_logic_vector(325,Nb);  
+  b0 <= conv_std_logic_vector(861,Nb) after tco;
+  b1 <= conv_std_logic_vector(861,Nb) after tco;
+  a1 <= conv_std_logic_vector(325,Nb) after tco;  
 
   process (CLK, RST_n)
     file fp_in : text open READ_MODE is "../input.txt"; --INPUT FILE
