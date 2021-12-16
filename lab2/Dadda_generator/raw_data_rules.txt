@@ -1,0 +1,19 @@
+--the first letter identifyes the type of connection
+--The bit names are written WITHOUT < and >, names can be max 15 characters long
+--lower case bit names represent single bits (std_logic)
+--while upper case bit names represent bits of a vector (std_logic_vector), in this case
+--the name must be in the format <prefix>_<number> where <number> is the position inside the vector
+
+--input (letter I)
+I<Signal> --input signal eg. IB_0 is input B_0
+--output (letter O)
+O<Signal> --output signal eg. OB_0 is output B_0
+--direct assignment (letter A)
+A<Source>=<Destination> --connection is from source to destination eg.AC1_0=S2_1 comnnection from C1_0 to S2_1
+
+--half and full adders (floating output pins can be created with '-' as I/O name
+
+--half adder (letter H)
+H<In1>=<In1>=<Out>=<Cout>
+--full adder (letter F)
+F<In1>=<In1>=<Cin>=<Out>=<Cout> 

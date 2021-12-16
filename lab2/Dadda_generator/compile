@@ -1,0 +1,10 @@
+#!/bin/bash
+if [[ $# == 1 ]] ; then
+executable=${1%.c}
+echo "Creating executable ${executable}"
+gcc -Wall -c $1 -std=c99
+gcc "${executable}.o" -o "${executable}"
+rm "${executable}.o"
+else
+echo "Error, missing argument (.c file name)"
+fi
