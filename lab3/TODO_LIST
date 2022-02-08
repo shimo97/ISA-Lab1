@@ -1,0 +1,7 @@
+BLOCK			FILENAME		STATUS
+ALU			ALU.vhd			done and verified
+Register file		RF.vhd			done and verified
+Memories		MEM.vhd			done and verified
+Immediate gen		IMM_GEN.vhd		done and verified
+Control & ALUcontrol	ControlBlock.vhd	done and verified
+Forwarding unit		ForwardingUnit.vhd	done and verified
