@@ -11,12 +11,12 @@ CLK : in std_logic;
 RST_n : in std_logic;
 I_ADDR : out unsigned(31 downto 0);
 I_RE : out std_logic;
-INSTR : in unsigned(31 downto 0);
+INSTR : in std_logic_vector(31 downto 0);
 D_ADDR : out unsigned(31 downto 0);
 D_RE : out std_logic;
 D_WE : out std_logic;
-DATA_IN : in unsigned(31 downto 0);
-DATA_OUT : out unsigned(31 downto 0)
+DATA_IN : in std_logic_vector(31 downto 0);
+DATA_OUT : out std_logic_vector(31 downto 0)
 );
 end entity;
 
@@ -24,8 +24,8 @@ architecture beh of RISC_V is
 
 signal I_ADDRS : unsigned(31 downto 0):=I_BASEA;
 signal D_ADDRS : unsigned(31 downto 0):=D_BASEA;
-signal I_IN : unsigned(31 downto 0);
-signal D_OUT : unsigned(31 downto 0);
+signal I_IN : std_logic_vector(31 downto 0);
+signal D_OUT : std_logic_vector(31 downto 0);
 
 signal test_phase : integer :=0; --test phase signal
 
@@ -38,34 +38,33 @@ begin
 if RST_n='0' then
 	test_phase<=-1;
 else
-	if CLK'event and CLK='1' then
+	case test_phase is
+	when 0 =>	--read instr and write on data
+		I_RE<='1' after Tco;
+		D_RE<='0' after Tco;
+		D_WE<='1' after Tco;
+	when 1 =>	--do not read nothing and write (nothing) on data 
+		I_RE<='0' after Tco;
+		D_RE<='0' after Tco;
+		D_WE<='1' after Tco;
+	when 2 =>	--read instr and do not write on data
+		I_RE<='1' after Tco;
+		D_RE<='0' after Tco;
+		D_WE<='0' after Tco;
+	when others =>	--reset position
+		I_RE<='0' after Tco;
+		D_RE<='0' after Tco;
+		D_WE<='0' after Tco;
+	end case;
 
-		case test_phase is
-		when 0 =>	--read instr and write on data
-			I_RE<='1' after Tco;
-			D_RE<='0' after Tco;
-			D_WE<='1' after Tco;
-		when 1 =>	--do not read nothing and write (nothing) on data 
-			I_RE<='0' after Tco;
-			D_RE<='0' after Tco;
-			D_WE<='1' after Tco;
-		when 2 =>	--read instr and do not write on data
-			I_RE<='1' after Tco;
-			D_RE<='0' after Tco;
-			D_WE<='1' after Tco;
-		when others =>	--reset position
-			I_RE<='0' after Tco;
-			D_RE<='0' after Tco;
-			D_WE<='0' after Tco;
-		end case;
-
+		if CLK'event and CLK='1' then
 		if test_phase/=-1 then
 			I_ADDRS<=I_ADDRS+4 after Tco;
 			D_ADDRS<=D_ADDRS+4 after Tco;
 		end if;
 
 		test_phase<=test_phase+1;
-		if test_phase=3 then
+		if test_phase=2 then
 			test_phase<=0;
 		end if;
 	end if;

@@ -1,8 +1,10 @@
 vdel -all
 vlib work
-vcom -93 -work ./work ./MEM.vhd
-vcom -93 -work ./work ./FAKE_DUT.vhd
-vcom -93 -work ./work ./TB_RV.vhd
+
+--importare riscv qui
+
+vcom -93 -work ./work ../../src/RF_MEMS/MEM.vhd
+vcom -93 -work ./work ../../src/RISCV/TB_RV.vhd
 
 vsim work.TB_RV
 add wave sim:/TB_RV/*

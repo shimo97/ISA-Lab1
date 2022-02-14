@@ -21,26 +21,26 @@ port(
 	W_EN : in std_logic; --write enable (synchronous)
 	R_EN : in std_logic; --read enable (asynchronous)
 	ADDR : in unsigned(31 downto 0); --byte address (but 2 LSB will be discarded for word alignment)
-	W_IN : in unsigned(31 downto 0); --input data
-	R_OUT : out unsigned(31 downto 0) --output data
+	W_IN : in std_logic_vector(31 downto 0); --input data
+	R_OUT : out std_logic_vector(31 downto 0) --output data
 );
 end component;
 
 component RISC_V
-generic( I_BASEA : unsigned(31 downto 0) := x"00400000"; --base address of instructions
-	 D_BASEA : unsigned(31 downto 0) := x"10010000" --base address of data
+generic( I_BASEA : unsigned(31 downto 0) := x"00400000" --base address of instructions
+	 --;D_BASEA : unsigned(31 downto 0) := x"10010000" --base address of data
 );
 port(
 CLK : in std_logic;
 RST_n : in std_logic;
 I_ADDR : out unsigned(31 downto 0);
 I_RE : out std_logic;
-INSTR : in unsigned(31 downto 0);
+INSTR : in std_logic_vector(31 downto 0);
 D_ADDR : out unsigned(31 downto 0);
 D_RE : out std_logic;
 D_WE : out std_logic;
-DATA_IN : in unsigned(31 downto 0);
-DATA_OUT : out unsigned(31 downto 0)
+DATA_IN : in std_logic_vector(31 downto 0);
+DATA_OUT : out std_logic_vector(31 downto 0)
 );
 end component;
 
@@ -49,23 +49,23 @@ signal RST_n : std_logic:='0';
 signal DM_F_READ,DM_F_WRITE,IM_F_READ : std_logic; --memories file read
 signal DM_W_EN,DM_R_EN,IM_R_EN : std_logic; --memories read/write enables
 signal DM_ADDR,IM_ADDR : unsigned(31 downto 0); --memories addresses
-signal DM_W_IN,IM_W_IN,DM_R_OUT,IM_R_OUT : unsigned(31 downto 0); --memories inputs/outputs
+signal DM_W_IN,IM_W_IN,DM_R_OUT,IM_R_OUT : std_logic_vector(31 downto 0); --memories inputs/outputs
 
-signal TEST_LENGTH : integer :=50; --test length from reset (# of clock cycles)
-constant T_CLK : Time := 10ns; --clock period
+signal TEST_LENGTH : integer :=200; --test length from reset (# of clock cycles)
+constant T_CLK : Time := 10 ns; --clock period
 
 begin
 
 DM: MEM --data mem instance
-generic map(20,x"10010000","./dataMEM_in.hex","./dataMEM_out.hex")
+generic map(30,x"10010000","./dataMEM_in.hex","./dataMEM_out.hex")
 port map(RST_n,DM_F_READ,DM_F_WRITE,CLK,DM_W_EN,DM_R_EN,DM_ADDR,DM_W_IN,DM_R_OUT);
 
 IM: MEM --instruction mem instance 
-generic map(20,x"00400000","./instrMEM_in.hex","./instrMEM_out.hex")
+generic map(30,x"00400000","./instrMEM_in.hex","./instrMEM_out.hex")
 port map(RST_n,IM_F_READ,'0',CLK,'0',IM_R_EN,IM_ADDR,IM_W_IN,IM_R_OUT);
 
 DUT: RISC_V --dut instance
-generic map(x"00400000",x"10010000")
+--generic map(x"00400000",x"10010000")
 port map(CLK,RST_n,IM_ADDR,IM_R_EN,IM_R_OUT,DM_ADDR,DM_R_EN,DM_W_EN,DM_R_OUT,DM_W_IN);
 
 TP:process --mem initialization, clock and reset generation

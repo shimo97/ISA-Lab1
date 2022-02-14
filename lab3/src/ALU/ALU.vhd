@@ -40,7 +40,8 @@ begin
 		when "0101" => --RIGHT ASHIFT
 			RES<= shift_right(OP1,to_integer(unsigned(OP2(4 downto 0))));
 		when others =>
-			RES<=(others=>'X');
+			--RES<=(others=>'X');
+			RES<=(others=>'0');
 		
 	end case;
 end process;

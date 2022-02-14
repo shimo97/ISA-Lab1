@@ -17,9 +17,9 @@ port(
 	R_ADDR2 : in unsigned(4 downto 0); --second read address
 	W_ADDR : in unsigned(4 downto 0); --write address
 	--operands
-	R_OP1 : out unsigned(31 downto 0); --first output operand
-	R_OP2 : out unsigned(31 downto 0); --first output operand
-	W_OP : in unsigned(31 downto 0); --write operand
+	R_OP1 : out std_logic_vector(31 downto 0); --first output operand
+	R_OP2 : out std_logic_vector(31 downto 0); --first output operand
+	W_OP : in std_logic_vector(31 downto 0); --write operand
 	--commands
 	WR : in std_logic --write command
 );
@@ -31,9 +31,9 @@ signal CLK : std_logic:='0';
 signal R_ADDR1 : unsigned(4 downto 0):=(others=>'0'); --first read address
 signal R_ADDR2 : unsigned(4 downto 0):=(others=>'0'); --second read address
 signal W_ADDR : unsigned(4 downto 0):=(others=>'0'); --write address
-signal R_OP1 : unsigned(31 downto 0); --first output operand
-signal R_OP2 : unsigned(31 downto 0); --first output operand
-signal W_OP : unsigned(31 downto 0); --write operand
+signal R_OP1 : std_logic_vector(31 downto 0); --first output operand
+signal R_OP2 : std_logic_vector(31 downto 0); --first output operand
+signal W_OP : std_logic_vector(31 downto 0); --write operand
 signal WR : std_logic:='0'; --write command
 
 signal ERR: std_logic:='0';
@@ -59,26 +59,34 @@ if RST_n='0' then
 else
 	if regpos<32 then
 		W_ADDR<=to_unsigned(regpos,5); --setting address
-		W_OP<=x"FFFFFF00"+to_unsigned(regpos,32); --writing data
+		W_OP<=std_logic_vector(x"FFFFFF00"+to_unsigned(regpos,32)); --writing data
 		WR<='0'; --write enable to 0
 		wait for T_CLK/2*0.1; --wait for setting values
-
+		
 		CLK<='1';	--clock cycle
 		wait for T_CLK/2;
 		CLK<='0';
 		wait for T_CLK/2*0.9;
 
-		if R_OP1/= x"00000000" or R_OP2/= x"00000000" then --if data has been written with WR=0
+		if R_OP1/= x"00000000" or R_OP2/= x"00000000" then --if data has been written or bypassed with WR=0
 			ERR<='1';
-			report "Data has been written with WR=0" severity error;
+			report "Data has been written or bypassed with WR=0" severity error;
 		end if;
 		
 		WR<='1'; --write enable to 1
 		wait for T_CLK/2*0.1; --wait for setting values
+		
+		if R_OP1/= W_OP or R_OP2/=W_OP then --if data has not been bypassed
+			if W_ADDR/="00000" then --if not x0
+				ERR<='1';
+				report "Data has not been bypassed" severity error;
+			end if;
+		end if;
 
 		CLK<='1';	--clock cycle
 		wait for T_CLK/2;
 		CLK<='0';
+		WR<='0';
 		wait for T_CLK/2*0.9;
 		
 		if regpos=0 then

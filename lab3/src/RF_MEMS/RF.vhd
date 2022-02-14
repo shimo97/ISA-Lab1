@@ -12,9 +12,9 @@ port(
 	R_ADDR2 : in unsigned(4 downto 0); --second read address
 	W_ADDR : in unsigned(4 downto 0); --write address
 	--operands
-	R_OP1 : out unsigned(31 downto 0); --first output operand
-	R_OP2 : out unsigned(31 downto 0); --first output operand
-	W_OP : in unsigned(31 downto 0); --write operand
+	R_OP1 : out std_logic_vector(31 downto 0); --first output operand
+	R_OP2 : out std_logic_vector(31 downto 0); --first output operand
+	W_OP : in std_logic_vector(31 downto 0); --write operand
 	--commands
 	WR : in std_logic --write command
 );
@@ -23,7 +23,7 @@ end entity;
 architecture beh of RF is
 
 --registers creation
-type reg_arr is array(31 downto 0) of unsigned(31 downto 0);
+type reg_arr is array(31 downto 0) of std_logic_vector(31 downto 0);
 signal reg : reg_arr;
 
 begin
@@ -47,13 +47,21 @@ end if;
 
 end process;
 
-RP: process(R_ADDR1,R_ADDR2,reg) --asynchronous read process
+RP: process(R_ADDR1,R_ADDR2,reg,RST_n,W_ADDR,W_OP,WR) --asynchronous read process
 variable addr : natural;
 begin
-	addr:=to_integer(R_ADDR1);
-	R_OP1<=reg(addr);
-	addr:=to_integer(R_ADDR2);
-	R_OP2<=reg(addr);
+	if (R_ADDR1 = W_ADDR) and WR='1' and W_ADDR/="00000" then --bypass
+		R_OP1 <= W_OP;
+	else
+		addr:=to_integer(R_ADDR1);
+		R_OP1<=reg(addr);
+	end if;
+	if (R_ADDR2 = W_ADDR) and WR='1' and W_ADDR/="00000" then --bypass
+		R_OP2 <= W_OP;
+	else
+		addr:=to_integer(R_ADDR2);
+		R_OP2<=reg(addr);
+	end if;
 end process;
 
 end architecture;

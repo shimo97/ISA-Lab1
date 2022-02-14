@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity IMM_GEN is
 port(
 	INSTR : in unsigned(31 downto 0); --first operand
-	IMM : out unsigned(31 downto 0) --second operand
+	IMM : out std_logic_vector(31 downto 0) --second operand
 );
 end entity;
 
@@ -78,23 +78,23 @@ ID: process(INSTR,opcode,funct3,funct7) --decode process
 begin
 
 if opcode="0000011" and funct3="010" then --lw
-	IMM<=I_immediate(INSTR);
+	IMM<=std_logic_vector(I_immediate(INSTR));
 elsif opcode="0100011" and funct3="010" then --sw
-	IMM<=S_immediate(INSTR);
+	IMM<=std_logic_vector(S_immediate(INSTR));
 elsif opcode="0010011" and funct3="000" then --addi
-	IMM<=I_immediate(INSTR);
+	IMM<=std_logic_vector(I_immediate(INSTR));
 elsif opcode="0010111" then --auipc
-	IMM<=U_immediate(INSTR);
+	IMM<=std_logic_vector(U_immediate(INSTR));
 elsif opcode="0110111" then --lui
-	IMM<=U_immediate(INSTR);
+	IMM<=std_logic_vector(U_immediate(INSTR));
 elsif opcode="1100011" and funct3="000" then --beq
-	IMM<=B_immediate(INSTR);
+	IMM<=std_logic_vector(B_immediate(INSTR));
 elsif opcode="0010011" and funct3="101" then --srai
-	IMM<=I_immediate(INSTR);
+	IMM<=std_logic_vector(I_immediate(INSTR));
 elsif opcode="0010011" and funct3="111" then --andi
-	IMM<=I_immediate(INSTR);
+	IMM<=std_logic_vector(I_immediate(INSTR));
 elsif opcode="1101111" then --jal
-	IMM<=J_immediate(INSTR);
+	IMM<=std_logic_vector(J_immediate(INSTR));
 else
    IMM<=(others=>'0');
 end if; 

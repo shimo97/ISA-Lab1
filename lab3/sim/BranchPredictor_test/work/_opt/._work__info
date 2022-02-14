@@ -1,0 +1,69 @@
+m255
+13
+cModel Technology
+d/home/isa06_2021_2022/labs/lab3/sim/BranchPredictor_test
+T_opt
+VMLPljgl<0z?Ol?CXeiE1S1
+06 18 3 ./work tb_branchpredictor beh 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2g;35
+Ebranchpredictor
+w1644847868
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+8../../src/BranchPredictor/BranchPredictor.vhd
+F../../src/BranchPredictor/BranchPredictor.vhd
+l0
+L5
+VL;`VST5YVAR9N3Z^gN:=F0
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abehavior
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work branchpredictor L;`VST5YVAR9N3Z^gN:=F0
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l30
+L17
+V5;;TcbZMX_lefI?hfWnY72
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Etb_branchpredictor
+w1644862587
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+8../../src/BranchPredictor/tb_BranchPredictor.vhd
+F../../src/BranchPredictor/tb_BranchPredictor.vhd
+l0
+L9
+VEn=8523Ie?W@jjH;mEEUh1
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abeh
+DE work branchpredictor L;`VST5YVAR9N3Z^gN:=F0
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work tb_branchpredictor En=8523Ie?W@jjH;mEEUh1
+31
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 ieee std_logic_textio
+M1 std textio
+l42
+L12
+VH0=4:J5a:6WXJmdZ;L4HC3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1

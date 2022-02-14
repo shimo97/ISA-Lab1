@@ -18,15 +18,15 @@ port(
 	W_EN : in std_logic; --write enable (synchronous)
 	R_EN : in std_logic; --read enable (asynchronous)
 	ADDR : in unsigned(31 downto 0); --byte address (but 2 LSB will be discarded for word alignment)
-	W_IN : in unsigned(31 downto 0); --input data
-	R_OUT : out unsigned(31 downto 0) --output data
+	W_IN : in std_logic_vector(31 downto 0); --input data
+	R_OUT : out std_logic_vector(31 downto 0) --output data
 );
 end entity;
 
 architecture beh of MEM is
 
 --memory creation
-type mem_arr is array(Nw-1 downto 0) of unsigned(31 downto 0);
+type mem_arr is array(Nw-1 downto 0) of std_logic_vector(31 downto 0);
 signal mem : mem_arr;
 
 signal max_addr : unsigned(31 downto 0):=X"FFFFFFFF";
@@ -71,7 +71,7 @@ else
 			if currPos >= Nw then --if address space exceeded
 				report "Memory size exceeded!" severity error;
 			else
-				mem(currPos)<=unsigned(data_in_var32);
+				mem(currPos)<=data_in_var32;
 				currPos:=currPos+1;
 			end if;
 		end loop;
@@ -95,7 +95,7 @@ end if;
 end process;
 
 -----------------------------------------------------
-RP: process(ADDR,R_EN) --read process
+RP: process(ADDR,R_EN,RST_n,mem) --read process
 variable i_addr :integer;
 begin
 	if R_EN = '1' then
@@ -126,7 +126,7 @@ begin
 	if F_WRITE='1' and F_WRITE'event then --file write
 		currPos := 0;
 	   	while currPos<Nw loop --loading on mem from file
-			hwrite(line_out, std_logic_vector(mem(currPos)));	--writing		      	
+			hwrite(line_out, mem(currPos));	--writing		      	
 			writeline(fp_out, line_out);
 			currPos:=currPos+1;
 		end loop;

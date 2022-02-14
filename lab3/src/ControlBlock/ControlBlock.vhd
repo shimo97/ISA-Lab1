@@ -5,7 +5,7 @@ USE ieee.numeric_std.all;
 ENTITY ControlBlock IS
 	PORT (opcode : IN std_logic_vector(6 downto 0);
 			funct : IN std_logic_vector(2 downto 0);
-			Branch, MemRead, MemtoReg : OUT std_logic;
+			Op2ALUbypass, Branch, MemRead, MemtoReg : OUT std_logic;
 			ALUOp : OUT std_logic_vector(3 downto 0);
 			MemWrite, ALUsrc1, ALUsrc2, RegWrite, RegWriteSrc : OUT std_logic);
 END ControlBlock;
@@ -17,6 +17,7 @@ ARCHITECTURE structure OF ControlBlock IS
 
 BEGIN
 
+	Op2ALUbypass <= (not opcode(6)) and opcode(5) and opcode(2);
 	Branch <= opcode(6);
 	MemRead <= (not opcode(5)) and (not opcode(4));
 	MemtoReg <= (not opcode(5)) and (not opcode(4));
