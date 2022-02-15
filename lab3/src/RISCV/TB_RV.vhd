@@ -27,9 +27,6 @@ port(
 end component;
 
 component RISC_V
-generic( I_BASEA : unsigned(31 downto 0) := x"00400000" --base address of instructions
-	 --;D_BASEA : unsigned(31 downto 0) := x"10010000" --base address of data
-);
 port(
 CLK : in std_logic;
 RST_n : in std_logic;
@@ -51,7 +48,7 @@ signal DM_W_EN,DM_R_EN,IM_R_EN : std_logic; --memories read/write enables
 signal DM_ADDR,IM_ADDR : unsigned(31 downto 0); --memories addresses
 signal DM_W_IN,IM_W_IN,DM_R_OUT,IM_R_OUT : std_logic_vector(31 downto 0); --memories inputs/outputs
 
-signal TEST_LENGTH : integer :=4000; --test length from reset (# of clock cycles)
+signal TEST_LENGTH : integer :=300; --test length from reset (# of clock cycles)
 constant T_CLK : Time := 10 ns; --clock period
 
 begin
@@ -64,8 +61,9 @@ IM: MEM --instruction mem instance
 generic map(64,x"00400000","./instrMEM_in.hex","./instrMEM_out.hex")
 port map(RST_n,IM_F_READ,'0',CLK,'0',IM_R_EN,IM_ADDR,IM_W_IN,IM_R_OUT);
 
+IM_W_IN<=(others =>'0');
+
 DUT: RISC_V --dut instance
---generic map(x"00400000",x"10010000")
 port map(CLK,RST_n,IM_ADDR,IM_R_EN,IM_R_OUT,DM_ADDR,DM_R_EN,DM_W_EN,DM_R_OUT,DM_W_IN);
 
 TP:process --mem initialization, clock and reset generation

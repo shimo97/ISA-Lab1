@@ -27,4 +27,4 @@ add wave -hex sim:/tb_rv/DUT/ID_stage/RegFile/*
 add wave -hex sim:/tb_rv/DUT/EX_stage/*
 add wave -hex sim:/tb_rv/DUT/ID_stage/*
 add wave -hex sim:/tb_rv/DUT/IF_stage/BPU/*
-run 3 us
+run 3.2 us
