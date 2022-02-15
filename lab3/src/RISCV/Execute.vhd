@@ -92,6 +92,13 @@ BEGIN
 			WB_output WHEN "01",
 			MEM_ALUResult WHEN "10",
 			immediate WHEN OTHERS;
+
+	--Multiplexer for memory write data
+	WITH forward2 SELECT
+		DataToDMEM <= RegOp2 WHEN "00",
+			WB_output WHEN "01",
+			MEM_ALUResult WHEN "10",
+			RegOp2 WHEN OTHERS;
 			
 	-- ALU
 	mainALU : ALU port map (OP1 => signed(ALUOp1),
@@ -103,7 +110,7 @@ BEGIN
 		ALUResult <= std_logic_vector(signedRes) WHEN '0',
 			ALUOp2 WHEN OTHERS;
 									
-	DataToDMEM <= RegOp2;
+	
 	
 	-- Forwarding Unit
 	FU : ForwardingUnit generic map (5) port map (RS1 => ID_EX_RS1,

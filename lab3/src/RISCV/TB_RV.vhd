@@ -51,17 +51,17 @@ signal DM_W_EN,DM_R_EN,IM_R_EN : std_logic; --memories read/write enables
 signal DM_ADDR,IM_ADDR : unsigned(31 downto 0); --memories addresses
 signal DM_W_IN,IM_W_IN,DM_R_OUT,IM_R_OUT : std_logic_vector(31 downto 0); --memories inputs/outputs
 
-signal TEST_LENGTH : integer :=200; --test length from reset (# of clock cycles)
+signal TEST_LENGTH : integer :=4000; --test length from reset (# of clock cycles)
 constant T_CLK : Time := 10 ns; --clock period
 
 begin
 
 DM: MEM --data mem instance
-generic map(30,x"10010000","./dataMEM_in.hex","./dataMEM_out.hex")
+generic map(64,x"10010000","./dataMEM_in.hex","./dataMEM_out.hex")
 port map(RST_n,DM_F_READ,DM_F_WRITE,CLK,DM_W_EN,DM_R_EN,DM_ADDR,DM_W_IN,DM_R_OUT);
 
 IM: MEM --instruction mem instance 
-generic map(30,x"00400000","./instrMEM_in.hex","./instrMEM_out.hex")
+generic map(64,x"00400000","./instrMEM_in.hex","./instrMEM_out.hex")
 port map(RST_n,IM_F_READ,'0',CLK,'0',IM_R_EN,IM_ADDR,IM_W_IN,IM_R_OUT);
 
 DUT: RISC_V --dut instance
